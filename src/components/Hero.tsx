@@ -4,9 +4,7 @@ import React, { useState } from 'react';
 import { Cloud, Server, Database, Shield, Cpu, Terminal, ArrowRight, Download, Camera } from 'lucide-react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
 
-const profileImagePath = process.env.NEXT_PUBLIC_REPO_NAME
-  ? `/${process.env.NEXT_PUBLIC_REPO_NAME}/images/profile.jpg`
-  : '/images/profile.jpg';
+const profileImagePath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/profile.jpg`;
 
 export const Hero = () => {
   const [profileImage, setProfileImage] = useState<string>(profileImagePath);

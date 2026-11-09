@@ -27,7 +27,7 @@ export const PERSONAL_INFO = {
   experienceYears: "10+",
   email: "prashanthrajenderan@gmail.com",
   linkedin: "https://www.linkedin.com/in/prashanth-rajenderan/",
-  resumePath: "/resume/Prashanth_Rajenderan_Resume.pdf",
+  resumePath: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/resume/Prashanth_Rajenderan_Resume.pdf`,
 };
 
 export const METRICS = [
