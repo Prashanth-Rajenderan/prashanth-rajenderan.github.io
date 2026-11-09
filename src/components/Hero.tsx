@@ -4,8 +4,12 @@ import React, { useState } from 'react';
 import { Cloud, Server, Database, Shield, Cpu, Terminal, ArrowRight, Download, Camera } from 'lucide-react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
 
+const profileImagePath = process.env.NEXT_PUBLIC_REPO_NAME
+  ? `/${process.env.NEXT_PUBLIC_REPO_NAME}/images/profile.jpg`
+  : '/images/profile.jpg';
+
 export const Hero = () => {
-  const [profileImage, setProfileImage] = useState<string>('/images/profile.jpg');
+  const [profileImage, setProfileImage] = useState<string>(profileImagePath);
 
   const handleCustomPhoto = () => {
     const url = prompt("Enter the URL of your profile photo or leave blank to keep current:", profileImage);
